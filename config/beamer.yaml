@@ -1,0 +1,28 @@
+## Beamer parameters
+# The aspect ratio of the presentation. Format is ab for a:b ratio. 
+# Choose between : 43, 169, 1610, 149, 141, 54 or 32.
+aspectratio: 169
+# Add extra beamer options
+# beameroption: ...
+# The institutes linked to the presentation
+intitute:
+  - "Example institute"
+  - "Another institute"
+# Logo image for slides
+# logo: logo.png
+# Navigation symbols. Choose between empty, frame, vertical or horizontal
+navigation: empty
+# Enable title pages for new sections
+section-titles: true
+# Beamer themes
+theme: Warsaw
+# colortheme: Warsaw
+# fonttheme: Warsaw
+# innertheme: Warsaw
+# outertheme: Warsaw
+# Beamer theme options
+# themeoptions: 
+#   - option
+#   - anotheroption
+# Image for title slide
+# titlegraphic: img.png

@@ -1,0 +1,46 @@
+
+@misc{stievenart_security_2021,
+	title = {The {Security} {Risk} of {Lacking} {Compiler} {Protection} in {WebAssembly}},
+	url = {http://arxiv.org/abs/2111.01421},
+	abstract = {WebAssembly is increasingly used as the compilation target for cross-platform applications. In this paper, we investigate whether one can rely on the security measures enforced by existing C compilers when compiling C programs to WebAssembly. We compiled 4,469 C programs with known buffer overflow vulnerabilities to x86 code and to WebAssembly, and observed the outcome of the execution of the generated code to differ for 1,088 programs. Through manual inspection, we identified that the root cause for these is the lack of security measures such as stack canaries in the generated WebAssembly: while x86 code crashes upon a stack-based buffer overflow, the corresponding WebAssembly continues to be executed. We conclude that compiling an existing C program to WebAssembly without additional precautions may hamper its security, and we encourage more research in this direction.},
+	urldate = {2023-03-29},
+	publisher = {arXiv},
+	author = {Stiévenart, Quentin and De Roover, Coen and Ghafari, Mohammad},
+	month = nov,
+	year = {2021},
+	note = {arXiv:2111.01421 [cs]},
+	keywords = {Computer Science - Cryptography and Security, Computer Science - Programming Languages, WASM},
+	file = {arXiv Fulltext PDF:/home/mh4ck/Zotero/storage/CZNNWPXT/Stiévenart et al. - 2021 - The Security Risk of Lacking Compiler Protection i.pdf:application/pdf;arXiv.org Snapshot:/home/mh4ck/Zotero/storage/M75NGYC2/2111.html:text/html},
+}
+
+@misc{noauthor_zotero_nodate,
+	title = {Zotero {\textbar} {Connectors}},
+	url = {https://www.zotero.org/download/connectors},
+	urldate = {2023-03-30},
+}
+
+@inproceedings{lehmann_everything_2020,
+	title = {Everything {Old} is {New} {Again}: {Binary} {Security} of \{{WebAssembly}\}},
+	isbn = {978-1-939133-17-5},
+	shorttitle = {Everything {Old} is {New} {Again}},
+	url = {https://www.usenix.org/conference/usenixsecurity20/presentation/lehmann},
+	language = {en},
+	urldate = {2023-03-30},
+	author = {Lehmann, Daniel and Kinder, Johannes and Pradel, Michael},
+	year = {2020},
+	keywords = {WASM},
+	pages = {217--234},
+	file = {Full Text PDF:/home/mh4ck/Zotero/storage/8PNYP9TU/Lehmann et al. - 2020 - Everything Old is New Again Binary Security of W.pdf:application/pdf},
+}
+
+@misc{noauthor_standardizing_nodate,
+	title = {Standardizing {WASI}: {A} system interface to run {WebAssembly} outside the web – {Mozilla} {Hacks} - the {Web} developer blog},
+	shorttitle = {Standardizing {WASI}},
+	url = {https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface},
+	abstract = {WebAssembly is an assembly language for a conceptual machine, not a physical one. This is why it can be run across a variety of different machine architectures. WebAssembly needs a ...},
+	language = {en-US},
+	urldate = {2023-03-30},
+	journal = {Mozilla Hacks – the Web developer blog},
+	keywords = {WASM},
+	file = {Snapshot:/home/mh4ck/Zotero/storage/EFBILJY4/standardizing-wasi-a-webassembly-system-interface.html:text/html},
+}

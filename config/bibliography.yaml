@@ -1,0 +1,11 @@
+# The metadata config for the bibliography
+
+# The bibliography file
+bibliography: 
+  - biblio.bib
+  # - ...
+# The CSL (bibliography style config file)
+# csl: csl.csl
+# The citations abbreviations file
+# XXX check what this does
+# citation-abbreviations: ab.json

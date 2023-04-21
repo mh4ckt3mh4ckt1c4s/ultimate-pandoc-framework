@@ -1,0 +1,25 @@
+# All the metadata regarding the content of your document.
+
+# The title of the document
+title: "Example title"
+# The author(s) of the document
+author: 
+  - "Example author"
+  - "Another author"
+# The date of the document
+date: "01/01/2000"
+# The subtitle of the document
+subtitle: "Example subtitle"
+# The abstract of the document
+# abstract: |
+  # Example abstract, BLA BLA BLA, BLA BLA BLA, BLA BLA
+
+  # Using multiple paragraphs...
+# The keywords of the document (in PDF metadata)
+keywords:
+  - "Example"
+  - "keywords"
+# The subject of the document (in PDF metadata)
+subject: "Example subject"
+# The language of the document
+lang: "en-US"

@@ -1,0 +1,111 @@
+# All the configurations related the the LaTeX engine.
+
+# make \paragraph and \subparagraph free-standing rather than run-in
+block-headings: false
+# option for document class
+classoption:
+  # - twocolumn
+  # - landscape
+# The document class
+documentclass: article
+# option for geometry package
+geometry: 
+  - left=2cm
+  - right=2cm
+  - top=2cm
+  - bottom=2cm
+# option for hyperref package
+hyperrefoptions:
+  - linktoc=all
+  - pdfwindowui
+  - pdfpagemode=FullScreen
+# if true, pandoc will use document class settings for indentation 
+# (the default LaTeX template otherwise removes indentation and adds space between paragraphs) 
+indent: false
+# adjusts line spacing using the setspace package
+linestretch: 1.25
+# sets margins if geometry is not used (otherwise geometry overrides these) 
+# margin-left: 1cm
+# margin-right: 1cm
+# margin-top: 1cm
+# margin-bottom: 1cm
+# control \pagestyle{}: the default article class supports plain (default), 
+# empty (no running heads or page numbers), and headings (section titles in running heads) 
+pagestyle: plain
+# The paper size option
+papersize: a4
+# numbering depth for sections
+secnumdepth: 3
+# produce an article from Beamer slides 
+beamerarticle: false
+# allows font encoding to be specified through fontenc package (with pdflatex)
+fontenc: T1
+# font package for use with pdflatex
+fontfamily: ascii
+# options for package used as fontfamily
+# fontfamilyoptions:
+#   - ...
+# fontsize, choose between 10pt, 11pt or 12pt for standard classes
+fontsize: 12pt
+# font families for use with xelatex or lualatex: take the name of any system font, using the fontspec package.
+mainfont: DejaVu Sans
+# sansfont: Source Code Pro
+# monofont: Source Code Pro
+# mathfont: Source Code Pro
+# CJKmainfont: Source Code Pro
+# CJKsansfont: Source Code Pro
+# CJKmonofont: Source Code Pro
+# options to use with mainfont, sansfont, monofont, mathfont, CJKmainfont in xelatex and lualatex. 
+# mainfontoptions:
+# - Numbers=Lowercase
+# - Numbers=Proportional
+# sansfontoptions:
+# monofontoptions:
+# mathfontoptions:
+# CJKoptions:
+# options to pass to the microtype package 
+# microtypeoptions:
+#   - ...
+# add color to link text
+colorlinks: true
+# add visible box around links (has no effect if colorlinks is set)
+boxlinks: false
+# color for internal links
+linkcolor: #0000FF
+# color for external links (files)
+filecolor: #0000FF
+# color for citation links
+citecolor: #0000FF
+# color for URLs
+urlcolor: #0000FF
+# color for links in table of contents
+toccolor: #0000FF
+# causes links to be printed as footnotes 
+links-as-notes: true
+# style for URLs (e.g., tt, rm, sf, and, the default, same) 
+urlstyle: rm
+# include list of figures
+lof: true
+# include list of tables
+lot: true
+# contents of acknowledgments footnote after document title 
+# thanks: true
+# include table of contents (can also be set in config.yaml, see the README)
+toc: true
+# level of section to include in table of contents (can also be set in config.yaml, see the README)
+tocdepth: 3
+# title of table of contents
+toc-title: Table of all the content
+
+# Options for BibLaTeX / Natbib bibliography gestion (enable it in config.yaml)
+# list of options for biblatex 
+# biblatexoptions:
+  # - ...
+# bibliography style, when used with --natbib and --biblatex
+# biblio-style: ...
+# bibliography title, when used with --natbib and --biblatex 
+# biblio-title: ...
+# bibliography to use for resolving references 
+# bibliography: ...
+# list of options for natbib 
+# natbiboptions: ...

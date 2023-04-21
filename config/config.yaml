@@ -1,0 +1,142 @@
+# This file is used to configure all of pandoc options. See https://pandoc.org/MANUAL.html#defaults-files for reference.
+
+# Your input files. Order matters.
+input-files:
+  - sources/00_acknowledgements.md
+  - sources/01_introduction.md
+# The input format. Should not be modified.
+# Extensions may also be specified here. Syntax is format+extension1+extension2 for adding extensions
+# and format-extension1-extension2 to disable extensions.
+# Here, mark extension allows highlighting by using ==this syntax==.
+# Emoji extension allows to use :smile:-like Unicode emoticons.
+# TODO fix and enable emojis ?
+# TODO check other interesting extensions
+# Interesting other extensions : autolink_bare_uris, abbreviations 
+from: markdown+mark
+# The output or intermediate format. Should not be modified.
+to: latex
+# Output file name.
+output-file: output/paper.pdf
+# Pandoc verbosity level. Choose between INFO (verbose) or ERROR (quiet)
+verbosity: ERROR
+# Fail (throwing an error) if a warning is encountered.
+fail-if-warnings: false
+# If pandoc should be run into a sandbox. Not needed if you are not using untrusted input.
+sandbox: false
+# The log file for pandoc output.
+log-file: output/pandoc.log
+# From the pandoc documentation :
+# Shift heading levels by a positive or negative integer.
+# For example, with --shift-heading-level-by=-1, level 2 headings become level 1 headings,
+# and level 3 headings become level 2 headings. Headings cannot have a level less than 1, 
+# so a heading that would be shifted below level 1 becomes a regular paragraph. 
+# Exception: with a shift of -N, a level-N heading at the beginning of the document replaces
+# the metadata title. --shift-heading-level-by=-1 is a good choice when converting HTML or 
+# Markdown documents that use an initial level-1 heading for the document title and level-2+
+# headings for sections. --shift-heading-level-by=1 may be a good choice for converting 
+# Markdown documents that use level-1 headings for sections to HTML, since pandoc uses a
+# level-1 heading to render the document title.
+shift-heading-level-by: 0
+# Classes to apply to the code blocks that are indented (designed by indentation in the markdown file)
+indented-code-classes:
+  - numberLines
+# Default image extension to use if you do not specify an extension in the images you use.
+default-image-extension: .png
+# Parse each file individually before combining them. This will allow footnotes in different
+# files with the same identifiers to work as expected. 
+# If this option is set, footnotes and links will not work across files. 
+file-scope: true
+# List of filters to transforming further the pandoc parsing.
+# XXX Check for good filters to use
+# XXX One metadata file per extension filter ?
+# filters:
+  # pandoc-crossref allows for cross-referencing objects with {#ref:someref}
+  # XXX check and write specific filters options
+  # TODO fix pandoc-crossref bug with listings 
+  # See https://github.com/lierdakil/pandoc-crossref/issues/197
+  # - pandoc-crossref
+  # TODO check boxes filter : ex in https://github.com/Wandmalfarbe/pandoc-latex-template/
+# Options for the additional filters, and metadata configuration of the output file
+# TODO create and document one metadata file per format / extension filter
+metadata-files:
+  - config/metadata.yaml
+  - config/bibliography.yaml
+  - config/latex.yaml
+  # - config/beamer.yaml
+  - config/crossref.yaml
+# Preserve tabs instead of converting them to spaces in code blocks.
+preserve-tabs: false
+# Specify the number of spaces per tab
+tab-stop: 4
+# Directory where the remote media will be downloaded
+extract-media: media
+# Specify a custom abbreviations file (only used to add nonbreaking space behind). This should not be needed.
+# abbreviations: abbrevs.txt
+# generate a complete document and not only a fragment
+standalone: true
+# Specify the template file to use
+template: templates/eisvogel.latex
+# Set the templates variables
+# Template variables (see the template / pandoc documentation for details)
+# TODO fill with eisvogel examples
+variables:
+  titlepage: true
+# Choose the end-of-line syntax to use.
+eol: native
+# Specify the default DPI value for conversion
+dpi: 300
+# Determine how the text is wrapped in the source code output.
+wrap: none
+# Specify the length of lines in characters for wrapping (option auto)
+columns: 72
+# Insert table of contents
+table-of-contents: true
+# Specify the number of section levels to include in the table of contents.
+toc-depth: 3
+# Strip out HTML comments <!-- comment --> from the sources files.
+strip-comments: true
+# Specifies the coloring style to be used in highlighted source code. 
+# Options are pygments, kate, monochrome, breezeDark, espresso, zenburn, haddock, and tango. Use null to disable highlights. 
+highlight-style: tango
+# Use a custom syntax definition file
+# syntax-definitions:
+#   - python.xml
+# Include content of the provided files at the end of the header.
+include-in-header:
+  - includes/header.tex
+# Include content of the provided files at the beginning of the body.
+include-before-body:
+  - includes/body.tex
+# Include content of the provided files at the end of the body.
+include-after-body:
+  - includes/body-end.tex
+# List of paths to search for images and other resources.
+resource-path: ['.', 'media']
+# Specify custom HTTP Headers to fetch remote resources
+# request-headers:
+#   - ["User-Agent", "Mozilla/5.0"]
+# Disable the certificate verification to allow access to unsecure HTTP resources
+no-check-certificate: false
+# Treat top-level headings as the given division type. Choose between section, chapter or part
+# TODO debug why option is not working
+# top-level-division: part
+# Give number to section headings 
+number-sections: true
+# Use the listings package for LaTeX code blocks
+listings: true
+# Make list items in slide shows display incrementally (one by one)
+incremental: true
+# Specifies that headings with the specified level create slides. Valid values are 0-6.
+slide-level: 2
+# Specify your PDF engine
+pdf-engine: xelatex
+# Use the given strings as a command-line argument to the pdf-engine. 
+# pdf-engine-opts:
+#   - '-shell-escape'
+# Process the citations in the file, replacing them with rendered citations and adding a bibliography. 
+# XXX citeproc can also be used as a filter 
+# XXX See citeproc vs natbib / biblatex choice
+citeproc: true
+# The cite method used. Choose between citeproc, biblatex or natbib.
+cite-method: citeproc
+
