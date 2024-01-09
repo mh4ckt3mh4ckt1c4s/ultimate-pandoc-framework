@@ -17,3 +17,9 @@ This ultimate template is aimed at producing LaTeX or Beamer-based PDF documents
 # Double parameters
 
 Sometimes, there are multiple places where a parameter can be set. For example, adding a table of contents to the document can be either set in `config.yaml` (equivalent of the generic `--toc` option) or into the specific `latex.yaml` options. In order to adapt all possible settings, these options are present in both files. Please note that the more specific configuration (here, `latex.yaml`) takes other the generic one. In case of a conflict or unexpected behavior, remember to comment out all the other configurations and keep only your own.
+
+# Explanation of config, set / unset yaml files according to options
+# Explanation of template framework update
+# Explanation of building with or without container, explanation of --user param problem 
+# Licenses
+# Beamer, pandoc and latex doc

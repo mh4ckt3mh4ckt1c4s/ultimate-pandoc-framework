@@ -1,6 +1,6 @@
 CONTAINER_TOOL=podman
 
-all: build, generate
+all: build generate
 
 generate-bare:
 	pandoc --defaults config/config.yaml
