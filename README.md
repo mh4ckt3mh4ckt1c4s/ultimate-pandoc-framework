@@ -41,11 +41,23 @@ Your document is now ready in the `output` folder !
 
 Sometimes, there are multiple places where a parameter can be set. For example, adding a table of contents to the document can be either set in `config.yaml` (equivalent of the generic `--toc` option) or into the specific `latex.yaml` options. In order to adapt for all possible settings, these options are present in both files. Please note that the more specific configuration (here, `latex.yaml`) takes other the generic one. In case of a conflict or unexpected behavior, remember to comment out all the default configurations and keep only your own.
 
+### The container image
+
+TODO
+
+### More resources 
+
+To be able to use fully this template, you will need to check the documentation of the various project it uses :
+- the [Pandoc documentation](https://pandoc.org/MANUAL.html)
+- the documentation of the PDF engine you use, `pdflatex`, `lulatex` or other
+- the Beamer documentation if you are creating presentations, available from [here](https://ctan.org/pkg/beamer) 
+
 ## Contribute
+
+I'm happily taking feedbacks, issues and code contributions. This project is hosted on [GitLab](https://gitlab.com/mh4ckt3mh4ckt1c4s/pandoc-ultimate-template) and all of the development happens here. Please do NOT open issues or other contributions on mirrors (GitHub or other) as they will be disregarded. 
 
 ## License 
 
-# Explanation of config, set / unset yaml files according to options
-# Explanation of pandoc container image problems
-# Licenses
-# Beamer, pandoc and latex doc
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) for more informations.
+
+# Clean TODOs !!
