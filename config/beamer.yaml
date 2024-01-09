@@ -3,7 +3,8 @@
 # Choose between : 43, 169, 1610, 149, 141, 54 or 32.
 aspectratio: 169
 # Add extra beamer options
-# beameroption: ...
+# beameroption:
+  # - show notes
 # The institutes linked to the presentation
 intitute:
   - "Example institute"
@@ -15,14 +16,17 @@ navigation: empty
 # Enable title pages for new sections
 section-titles: true
 # Beamer themes
-theme: Warsaw
-# colortheme: Warsaw
-# fonttheme: Warsaw
-# innertheme: Warsaw
-# outertheme: Warsaw
+theme: Madrid
+# TODO check these options to have cool theme
+colortheme: whale
+fonttheme: structurebold
+innertheme: circles
+outertheme: tree
 # Beamer theme options
 # themeoptions: 
 #   - option
 #   - anotheroption
 # Image for title slide
-# titlegraphic: img.png
+# titlegraphic: media/book.png
+# The background image for slides
+# background-image: media/book.png

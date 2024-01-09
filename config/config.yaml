@@ -2,8 +2,8 @@
 
 # Your input files. Order matters.
 input-files:
-  - sources/00_acknowledgements.md
-  - sources/01_introduction.md
+  - sources/presentation.md
+  # - sources/01_introduction.md
 # The input format. Should not be modified.
 # Extensions may also be specified here. Syntax is format+extension1+extension2 for adding extensions
 # and format-extension1-extension2 to disable extensions.
@@ -14,7 +14,7 @@ input-files:
 # Interesting other extensions : autolink_bare_uris, abbreviations 
 from: markdown+mark
 # The output or intermediate format. Should not be modified.
-to: latex
+to: beamer
 # Output file name.
 output-file: output/paper.pdf
 # Pandoc verbosity level. Choose between INFO (verbose) or ERROR (quiet)
@@ -61,8 +61,8 @@ file-scope: true
 metadata-files:
   - config/metadata.yaml
   - config/bibliography.yaml
-  - config/latex.yaml
-  # - config/beamer.yaml
+  # - config/latex.yaml
+  - config/beamer.yaml
   - config/crossref.yaml
 # Preserve tabs instead of converting them to spaces in code blocks.
 preserve-tabs: false
@@ -75,7 +75,7 @@ extract-media: media
 # generate a complete document and not only a fragment
 standalone: true
 # Specify the template file to use
-template: templates/eisvogel.latex
+template: templates/default.latex
 # Set the templates variables
 # Template variables (see the template / pandoc documentation for details)
 # TODO fill with eisvogel examples
@@ -123,13 +123,13 @@ no-check-certificate: false
 # Give number to section headings 
 number-sections: true
 # Use the listings package for LaTeX code blocks
-listings: true
+listings: false
 # Make list items in slide shows display incrementally (one by one)
 incremental: true
 # Specifies that headings with the specified level create slides. Valid values are 0-6.
 slide-level: 2
 # Specify your PDF engine
-pdf-engine: xelatex
+pdf-engine: lualatex
 # Use the given strings as a command-line argument to the pdf-engine. 
 # pdf-engine-opts:
 #   - '-shell-escape'
