@@ -2,10 +2,22 @@
 
 # The bibliography file
 bibliography: 
-  - biblio.bib
+  - bibliography/biblio.bib
   # - ...
 # The CSL (bibliography style config file)
-# csl: csl.csl
+csl: bibliography/acm-sig-proceedings-long-author-list.csl
 # The citations abbreviations file
 # XXX check what this does
 # citation-abbreviations: ab.json
+# Suppress the bibliography generation
+suppress-bibliography: false 
+# create hyperlink  on citations to the corresponding bibliography entries
+link-citations: true
+# Render DOIs, PMCIDs, PMID, and URLs in bibliographies as hyperlinks
+link-bibliography: true
+# The lang field will affect how the style is localized, 
+# for example in the translation of labels, the use of quotation marks, and the way items are sorted.
+lang: en-US
+# put footnote references or superscripted numerical citations after following punctuation
+# XXX not working ?
+notes-after-punctuation: false

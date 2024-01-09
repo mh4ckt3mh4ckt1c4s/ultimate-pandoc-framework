@@ -29,7 +29,7 @@ all:
 
 ![](logo_cc-by-sa.png)
 
-Bla bla[^1]
+Bla bla [^1].
 
 [^1]: Footnote from introduction
 
@@ -37,7 +37,7 @@ Bla bla[^1]
 
 <!-- Reference to the code [@fig:cc-by-sa] -->
 
-Citation : [@stievenart_security_2021]
+Citation de ce papier [@stievenart_security_2021, p2-4].
 
 --------------
 
