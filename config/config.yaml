@@ -9,14 +9,12 @@ input-files:
 # and format-extension1-extension2 to disable extensions.
 # Here, mark extension allows highlighting by using ==this syntax==.
 # Emoji extension allows to use :smile:-like Unicode emoticons.
-# TODO fix and enable emojis ?
-# TODO check other interesting extensions
 # Interesting other extensions : autolink_bare_uris, abbreviations 
 from: markdown+mark
 # The output or intermediate format. Should not be modified.
 to: beamer
 # Output file name.
-output-file: output/paper.pdf
+output-file: output/slides.pdf
 # Pandoc verbosity level. Choose between INFO (verbose), WARNING or ERROR (quiet)
 verbosity: WARNING
 # Fail (throwing an error) if a warning is encountered.
@@ -47,17 +45,12 @@ default-image-extension: .png
 # If this option is set, footnotes and links will not work across files. 
 file-scope: true
 # List of filters to transforming further the pandoc parsing.
-# XXX Check for good filters to use
-# XXX One metadata file per extension filter ?
 # filters:
   # pandoc-crossref allows for cross-referencing objects with {#ref:someref}
-  # XXX check and write specific filters options
   # TODO fix pandoc-crossref bug with listings 
   # See https://github.com/lierdakil/pandoc-crossref/issues/197
   # - pandoc-crossref
-  # TODO check boxes filter : ex in https://github.com/Wandmalfarbe/pandoc-latex-template/
 # Options for the additional filters, and metadata configuration of the output file
-# TODO create and document one metadata file per format / extension filter
 metadata-files:
   - config/metadata.yaml
   - config/bibliography.yaml
@@ -78,7 +71,6 @@ standalone: true
 template: templates/default.latex
 # Set the templates variables
 # Template variables (see the template / pandoc documentation for details)
-# TODO fill with eisvogel examples
 variables:
   titlepage: true
 # Choose the end-of-line syntax to use.
@@ -118,7 +110,6 @@ resource-path: ['.', 'media']
 # Disable the certificate verification to allow access to unsecure HTTP resources
 no-check-certificate: false
 # Treat top-level headings as the given division type. Choose between section, chapter or part
-# TODO debug why option is not working
 # top-level-division: part
 # Give number to section headings 
 number-sections: true
@@ -134,7 +125,7 @@ pdf-engine: lualatex
 # pdf-engine-opts:
 #   - '-shell-escape'
 # Process the citations in the file, replacing them with rendered citations and adding a bibliography. 
-# XXX citeproc can also be used as a filter 
+# Warning: citeproc can also be used as a filter 
 citeproc: true
 # The cite method used. Choose between citeproc, biblatex or natbib.
 cite-method: citeproc

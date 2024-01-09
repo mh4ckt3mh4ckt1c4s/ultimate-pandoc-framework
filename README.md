@@ -1,14 +1,14 @@
 # Ultimate pandoc framework
 
-## What is it ?
+## What is it?
 
-I'm a big fan of using [Pandoc](https://pandoc.org) to write quick Markdown and generate beautiful, TeX-based documents and presentations. However, for heavy customization, constant back and forth to the Pandoc documentation and managing a dirty `build.sh` file containing the Pandoc command with all its flags was too painful. 
+I'm a big fan of using [pandoc](https://pandoc.org) to write quick Markdown and generate beautiful, TeX-based documents and presentations. However, for heavy customization, constant back and forth to the pandoc documentation and managing a dirty `build.sh` file containing the pandoc command with all its flags was too painful. 
 
-That's why I created this Pandoc framework, allowing to easily configure and use Pandoc with YAML files and a container-based reproducible and distributable build system. This framework is aimed at producing TeX or Beamer-based PDF documents and presentations. It can nevertheless be easily adapted to every input / output format supported by Pandoc.
+That's why I created this pandoc framework, allowing to easily configure and use pandoc with YAML files and a container-based reproducible and distributable build system. This framework is aimed at producing TeX or Beamer-based PDF documents and presentations. It can nevertheless be easily adapted to every input / output format supported by pandoc.
 
 ## Basic usage
 
-Start by cloning this project. 
+Start by downloading the source code. That way, you will not have the git repository of this project, and will be able to create a fresh one to manage your source files with it.
 
 ### Configuration
 
@@ -26,14 +26,14 @@ Finally, you can add custom TeX in the header, body and end of body using the fi
 
 ### Building 
 
-You're ready to build ! You juste need `make` installed and either :
+You're ready to build! You just need `make` installed and either:
 
 - Pandoc and all of its dependencies for the technology you want to build for installed, or
 - A container engine (e.g. Docker or Podman)
 
-Then, to build with Pandoc already install, use `make generate-bare`. If you prefer to use a container, add your eventual dependencies in the `Containerfile`, then `make build` to generate the container image and `make generate` to generate the document using the created container image. Note that Podman is the default and that you will need to change the first line of the `Makefile` to use Docker or another tool.
+Then, to build with pandoc already install, use `make generate-bare`. If you prefer to use a container, add your eventual dependencies in the `Containerfile`, then `make build` to generate the container image and `make generate` to generate the document using the created container image. Note that Podman is the default and that you will need to change the first line of the `Makefile` to use Docker or another tool.
 
-Your document is now ready in the `output` folder ! 
+Your document is now ready in the `output` folder! 
 
 ## Troubleshoot
 
@@ -43,21 +43,27 @@ Sometimes, there are multiple places where a parameter can be set. For example, 
 
 ### The container image
 
-TODO
+At first, I wanted to use the official [pandoc container images available on DockerHub](https://hub.docker.com/u/pandoc). However, I encountered a few issues with these images (see [here](https://github.com/pandoc/dockerfiles/issues/198) and [here](https://github.com/pandoc/dockerfiles/issues/208)). They have not been updated for months which may cause issues when using the latest options of pandoc (which I did in my experiments). I tried to repackage a newer version of pandoc with their scripts without success. I also wanted a flexible and simple container image (so that people can easily add their dependencies inside the container) and was not focusing on being lightweight. That is why I finally switched to an Alpine container that packages pandoc and most of the libraries needed inside its repos.
+
+If you have a problem of permissions, check that:
+
+- The folder(s) and file(s) in which you are trying to read and write are existing
+- The permissions of the files and inside the container are the same (no files owned by `root` in your repository for example). Also check the permissions of your container engine of you are using both rootful and rootless modes on your computer.
 
 ### More resources 
 
-To be able to use fully this template, you will need to check the documentation of the various project it uses :
-- the [Pandoc documentation](https://pandoc.org/MANUAL.html)
-- the documentation of the PDF engine you use, `pdflatex`, `lulatex` or other
+To be able to use fully this template, you will need to check the documentation of the various project it uses:
+
+- the [pandoc documentation](https://pandoc.org/MANUAL.html)
+- the documentation of the PDF engine you use, `pdflatex`, `lualatex` or other
 - the Beamer documentation if you are creating presentations, available from [here](https://ctan.org/pkg/beamer) 
 
 ## Contribute
 
-I'm happily taking feedbacks, issues and code contributions. This project is hosted on [GitLab](https://gitlab.com/mh4ckt3mh4ckt1c4s/pandoc-ultimate-template) and all of the development happens here. Please do NOT open issues or other contributions on mirrors (GitHub or other) as they will be disregarded. 
+I'm happily taking feedbacks, issues and code contributions. This project is hosted on [GitLab](https://gitlab.com/mh4ckt3mh4ckt1c4s/pandoc-ultimate-template) and all the development happens here. Please do NOT open issues or other contributions on mirrors (GitHub or other) as they will be disregarded. 
 
 ## License 
 
-This project is licensed under the MIT license. See the [LICENSE](LICENSE) for more informations.
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) for more information.
 
-# Clean TODOs !!
+# Clean TODOs!!

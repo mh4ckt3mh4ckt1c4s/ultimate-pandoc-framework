@@ -1,4 +1,4 @@
-CONTAINER_TOOL=podman
+CONTAINER_ENGINE=podman
 
 all: build generate
 
@@ -6,10 +6,10 @@ generate-bare:
 	pandoc --defaults config/config.yaml
 
 generate:
-	$(CONTAINER_TOOL) run --rm \
+	$(CONTAINER_ENGINE) run --rm \
 		--volume "$(shell pwd):/host" \
-		localhost/ultimate-pandoc-template-builder --defaults config/config.yaml
+		localhost/ultimate-pandoc-template-builder pandoc --defaults config/config.yaml
 
 build:
-	$(CONTAINER_TOOL) build -t localhost/ultimate-pandoc-template-builder -f Containerfile
+	$(CONTAINER_ENGINE) build -t localhost/ultimate-pandoc-template-builder -f Containerfile
 

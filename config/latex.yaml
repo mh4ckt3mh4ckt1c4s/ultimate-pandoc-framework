@@ -71,7 +71,6 @@ colorlinks: true
 # add visible box around links (has no effect if colorlinks is set)
 boxlinks: false
 # color for internal links
-# TODO see how its working and PR to pandoc documentation
 linkcolor: #0000FF
 # color for external links (files)
 filecolor: #0000FF
@@ -92,7 +91,6 @@ lot: true
 # contents of acknowledgments footnote after document title 
 # thanks: true
 # include table of contents (can also be set in config.yaml, see the README)
-# TODO document all the features with two locations for configurations in the README
 toc: true
 # level of section to include in table of contents (can also be set in config.yaml, see the README)
 tocdepth: 3

@@ -6,8 +6,6 @@ Still some **bold**, some *italic*, and some ~~strikethrough~~.
 
 ==highligts== are also possible with the corresponding option.
 
-<!-- TODO add this doc in readme https://ctan.tetaneutral.net/macros/latex/contrib/beamer/doc/beameruserguide.pdf -->
-
 ```rs {attr.source='.numberLines'}
 fn main() {
     println!("Hello, Rust !");
@@ -19,17 +17,15 @@ fn main() {
 
 ------
 
-<!-- TODO describe the slide-level option and point to config.yaml https://pandoc.org/MANUAL.html#structuring-the-slide-show -->
-
 I can create new slides with `---` and stay in the same part
 
 ## A new part
 
-New smallest available header (see pandoc doc) will also create new slides
+The header number defined in the config will also create new slides
 
-<!-- ### This is a box 
+### This is a box 
 
-Incredible ! -->
+Under this number, parts will create boxes
 
 # A new section
 
@@ -67,8 +63,8 @@ But you can depart from the default using this syntax :
 
 ::: incremental
 
-- Eat spaghetti
-- Drink wine
+- This is 
+- incremental
 
 :::
 
@@ -76,8 +72,8 @@ But you can depart from the default using this syntax :
 
 ::: nonincremental
 
-- Eat spaghetti
-- Drink wine
+- This is not 
+- incremental at all
 
 :::
 
@@ -95,19 +91,6 @@ content first column
 content second column
 :::
 ::::::::::::::
-
-## Part part
-
-Notes on this slide
-
-::: notes
-
-This is my note.
-
-- It can contain Markdown
-- like this list
-
-:::
 
 ## Part another part {.fragile .allowframebreaks}
 

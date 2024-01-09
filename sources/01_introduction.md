@@ -33,8 +33,6 @@ Bla bla [^1].
 
 [^1]: Footnote from introduction
 
-<!-- TODO debug the crossref filter -->
-
 <!-- Reference to the code [@fig:cc-by-sa] -->
 
 Citation de ce papier [@stievenart_security_2021, p2-4].
