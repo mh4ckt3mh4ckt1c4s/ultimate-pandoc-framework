@@ -17,8 +17,8 @@ from: markdown+mark
 to: beamer
 # Output file name.
 output-file: output/paper.pdf
-# Pandoc verbosity level. Choose between INFO (verbose) or ERROR (quiet)
-verbosity: ERROR
+# Pandoc verbosity level. Choose between INFO (verbose), WARNING or ERROR (quiet)
+verbosity: WARNING
 # Fail (throwing an error) if a warning is encountered.
 fail-if-warnings: false
 # If pandoc should be run into a sandbox. Not needed if you are not using untrusted input.
