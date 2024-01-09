@@ -10,6 +10,8 @@ That's why I created this pandoc framework, allowing to easily configure and use
 
 Start by downloading the source code. That way, you will not have the git repository of this project, and will be able to create a fresh one to manage your source files with it.
 
+For a quick start, just ensure you have Podman and `make` installed and run `make`. The example available in the [presentation.md](./sources/presentation.md) file will be compiled into a PDF in `output/slides.pdf`. 
+
 ### Configuration
 
 All the configuration happens within the `config` folder. The main configuration options are in the `config.yaml` file. This is where you'll find all the generic options. The general configuration options for your output are in the `metadata.yaml` file, including, titles, keywords, date, and more.
@@ -34,6 +36,10 @@ You're ready to build! You just need `make` installed and either:
 Then, to build with pandoc already install, use `make generate-bare`. If you prefer to use a container, add your eventual dependencies in the `Containerfile`, then `make build` to generate the container image and `make generate` to generate the document using the created container image. Note that Podman is the default and that you will need to change the first line of the `Makefile` to use Docker or another tool.
 
 Your document is now ready in the `output` folder! 
+
+### More examples
+
+The course slides and associated lab subject available [here](https://gitlab.com/mh4ckt3mh4ckt1c4s/wasm-course-and-lab-tsp) have both been written using this framework. Feel free to browse them for an overview of what can be achieved with this framework.
 
 ## Troubleshoot
 
