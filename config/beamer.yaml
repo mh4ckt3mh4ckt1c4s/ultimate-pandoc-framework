@@ -10,14 +10,13 @@ intitute:
   - "Example institute"
   - "Another institute"
 # Logo image for slides
-# logo: logo.png
+# logo: media/book.png
 # Navigation symbols. Choose between empty, frame, vertical or horizontal
 navigation: empty
 # Enable title pages for new sections
 section-titles: true
 # Beamer themes
 theme: Madrid
-# TODO check these options to have cool theme
 colortheme: whale
 fonttheme: structurebold
 innertheme: circles

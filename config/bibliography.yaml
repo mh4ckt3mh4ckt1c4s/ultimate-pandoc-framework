@@ -7,7 +7,6 @@ bibliography:
 # The CSL (bibliography style config file)
 csl: bibliography/acm-sig-proceedings-long-author-list.csl
 # The citations abbreviations file
-# XXX check what this does
 # citation-abbreviations: ab.json
 # Suppress the bibliography generation
 suppress-bibliography: false 
