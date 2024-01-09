@@ -135,7 +135,6 @@ pdf-engine: lualatex
 #   - '-shell-escape'
 # Process the citations in the file, replacing them with rendered citations and adding a bibliography. 
 # XXX citeproc can also be used as a filter 
-# XXX See citeproc vs natbib / biblatex choice
 citeproc: true
 # The cite method used. Choose between citeproc, biblatex or natbib.
 cite-method: citeproc
