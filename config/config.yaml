@@ -47,7 +47,6 @@ file-scope: true
 # List of filters to transforming further the pandoc parsing.
 # filters:
   # pandoc-crossref allows for cross-referencing objects with {#ref:someref}
-  # TODO fix pandoc-crossref bug with listings 
   # See https://github.com/lierdakil/pandoc-crossref/issues/197
   # - pandoc-crossref
 # Options for the additional filters, and metadata configuration of the output file

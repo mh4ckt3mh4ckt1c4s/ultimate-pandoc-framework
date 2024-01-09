@@ -72,4 +72,3 @@ I'm happily taking feedbacks, issues and code contributions. This project is hos
 
 This project is licensed under the MIT license. See the [LICENSE](LICENSE) for more information.
 
-# Clean TODOs!!
