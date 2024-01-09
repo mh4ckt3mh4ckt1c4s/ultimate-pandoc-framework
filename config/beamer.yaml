@@ -15,6 +15,8 @@ intitute:
 navigation: empty
 # Enable title pages for new sections
 section-titles: true
+# causes links to be printed as footnotes (also present in latex.yaml)
+links-as-notes: true
 # Beamer themes
 theme: Madrid
 colortheme: whale
