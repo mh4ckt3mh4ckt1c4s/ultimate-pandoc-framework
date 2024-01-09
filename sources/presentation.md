@@ -29,7 +29,7 @@ Under this number, parts will create boxes
 
 # A new section
 
-## Subpart
+## Colored boxes
 
 ### Example !! {.example}
 
@@ -77,9 +77,9 @@ But you can depart from the default using this syntax :
 
 :::
 
-## part
+## Yet another part
 
-### Sub sub part 
+### Create columns
 
 How to create columns : 
 
@@ -92,7 +92,7 @@ content second column
 :::
 ::::::::::::::
 
-## Part another part {.fragile .allowframebreaks}
+## Automatic splitting {.fragile .allowframebreaks}
 
 This 
 
@@ -119,3 +119,11 @@ cut
 in 
 
 half
+
+## Adding images
+
+Add images like this (they can be stored in the `media` folder). Skipping the `.png` file extension will work if it is configured correctly in the configuration files.
+
+![](book.png){ width=250px }
+
+![](book){ width=20% }

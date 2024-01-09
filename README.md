@@ -20,7 +20,7 @@ Configurations to a specific output format are into the file `<format>.yaml`. Fo
 
 You can store the documents you write in the `sources` folder. Be sure to include the documents in the `config.yaml` file in the order you want them to be processed. 
 
-You can also store all your media inside the `media` folder (`sources` folder will also work). No need for relative paths when including your medias, as the `media` folder is already configured within `config.yaml` and Pandoc will find the resources automatically (e.g. use `![my image](./image.png)` will work even if `image.png` is in the `media` folder). 
+You can also store all your media inside the `media` folder (`sources` folder will also work). No need for relative paths when including your medias, as the `media` folder is already configured within `config.yaml` and Pandoc will find the resources automatically (e.g. use `![my image](./image.png)` will work even if `image.png` is in the `media` folder). You can also omit the file extension, or designate other source folders, if it is correctly configured in the configuration files.
 
 Finally, you can add custom TeX in the header, body and end of body using the files present in the `includes` folder (e.g. when needing to use a specific front page template for a document).
 
