@@ -11,5 +11,5 @@ generate:
 		localhost/ultimate-pandoc-template-builder pandoc --defaults config/config.yaml
 
 build:
-	$(CONTAINER_ENGINE) build -t localhost/ultimate-pandoc-template-builder -f Containerfile
+	$(CONTAINER_ENGINE) build -t localhost/ultimate-pandoc-template-builder -f Containerfile .
 
