@@ -19,3 +19,5 @@ link-bibliography: true
 lang: en-US
 # put footnote references or superscripted numerical citations after following punctuation
 notes-after-punctuation: false
+# title of the references section
+reference-section-title: "References"
